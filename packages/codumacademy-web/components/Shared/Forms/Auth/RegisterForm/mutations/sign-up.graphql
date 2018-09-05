@@ -1,0 +1,40 @@
+mutation SignUp($fullName: String!, $email: String!, $password: String!, $birtday: String!, $identityDoc: String!, $phone: String!, $typeIdentityDocId: Int!, $cityId: Int!, $stateId: Int!, $howDidYouFindUs: String! $howDidYouFindUsText: String){
+  signup(user: {
+    fullName: $fullName,
+    email: $email,
+    password: $password,
+    birtday: $birtday,
+    identityDoc: $identityDoc,
+    phone: $phone,
+    typeIdentityDocId: $typeIdentityDocId,
+    countryId: 47,
+    stateId: $stateId,
+    cityId: $cityId,
+    howDidYouFindUs: $howDidYouFindUs,
+    howDidYouFindUsText: $howDidYouFindUsText
+  }) {
+    token,
+    user {
+      id
+      fullName
+      email
+      isAdmin
+      birtday
+      typeIdentityDocId
+      identityDoc
+      phone
+      city {
+        id
+        name
+      }
+      state {
+        id
+        name
+      }
+      quizUserSummaries {
+         id
+         quizId
+      }
+    }
+  }
+}

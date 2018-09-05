@@ -1,0 +1,21 @@
+query getQuestion($quizId: Int!) {
+  getQuestion(quizId: $quizId) {
+    resolved
+    total
+    question {
+      id
+      description
+      title
+
+      quizQuestionType {
+        id
+        slug
+      }
+      quizAnswers {
+        id
+        answer
+        allowAddicionalText
+      }
+    }
+  }
+}

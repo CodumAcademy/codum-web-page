@@ -1,0 +1,9 @@
+query getCities($where: String!) {
+  cities(query: $where) {
+    rows {
+      id
+      name
+      stateId
+    }
+  }
+}

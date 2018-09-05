@@ -1,0 +1,42 @@
+mutation setAnswer($addicionalText: String, $quizId: Int!, $quizQuestionId: Int!, $quizAnswerId: Int!, $multiple: Boolean, $answers: String) {
+  setAnswer(data: {
+    addicionalText: $addicionalText,
+    quizId: $quizId,
+    quizQuestionId: $quizQuestionId,
+    quizAnswerId: $quizAnswerId,
+    multiple: $multiple,
+    answers: $answers
+  }) {
+    resolved
+    total
+    requiredApprove
+    summary {
+      id
+      finished
+      successAnswers
+      failedAnswers
+      quizId
+      userId
+    }
+    question {
+      id
+      description
+      title
+
+      quizQuestionType {
+        id
+        slug
+      }
+      quizAnswers {
+        id
+        answer
+        allowAddicionalText
+      }
+    }
+    convocationRequirement {
+      id
+      convocationRequirementId
+      completed
+    }
+  }
+}

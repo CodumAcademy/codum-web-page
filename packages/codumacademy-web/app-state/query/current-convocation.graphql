@@ -1,0 +1,19 @@
+query currentConvocation {
+  currentConvocation {
+    id
+    description
+    requirements
+    fromDate
+    toDate
+    convocationRequirements {
+      id
+      description
+      helpText
+      success
+      required
+      requiredApprove
+      withQuiz
+      quizId
+    }
+  }
+}

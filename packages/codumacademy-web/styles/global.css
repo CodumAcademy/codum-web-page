@@ -1,0 +1,154 @@
+@import "normalize.css";
+@import "animate.css";
+
+@font-face {
+    font-family: 'SofiaPro';
+    src: url("/static/fonts/sofia-pro/regular.otf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'SofiaPro';
+    src: url("/static/fonts/sofia-pro/bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'SofiaPro';
+    src: url("/static/fonts/sofia-pro/light.otf");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Aguda';
+    src: url("/static/fonts/aguda/regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Aguda';
+    src: url("/static/fonts/aguda/bold.otf");
+    font-weight: bold;
+}
+
+:root {
+  --green-1: #14f2b5;
+  --green-2: #42cfbd;
+  --green-3: #57e2d9;
+  --text-color: #4a4a4a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: "SofiaPro", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  outline: none;
+  background: transparent;
+}
+
+.root {
+  background: white;
+  box-shadow: 0 0 5px rgba(54, 54, 61, 0.5);
+  overflow-x: hidden;
+  max-width: 1366px;
+  margin: 0 auto;
+  transition: all ease .5s;
+}
+
+.font-aguda {
+  font-family: "Aguda", "SofiaPro", sans-serif;
+}
+
+.with-green-shape {
+  background: url("/static/images/green-shape-1.svg") no-repeat;
+  background-position: right top;
+  background-size: 74%;
+  animation-name: fadeGreenShape;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  @media (max-width: 480px) {
+    background-size: 70%;
+  }
+}
+
+.generic-input {
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(196, 196, 196, 0.5);
+  padding: 0.5rem 1rem;
+  outline: none;
+  transition: all ease 0.4s;
+  &::placeholder {
+    color: #9b9b9b;
+  }
+  &[disabled] {
+    background: gray;
+    background: #e2e2e2;
+    box-shadow: none;
+  }
+  &.error {
+    box-shadow: 0 2px 4px 0 rgba(214, 48, 49, 0.55);
+  }
+  &.select {
+    padding: 0;
+    .Select-control {
+      border: 0 !important;
+    }
+    &.disabled {
+      .Select-control {
+        background: #e2e2e2;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@keyframes fadeGreenShape {
+  from {
+    background-position: 200% top;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
+.body-transition {
+  .root {
+    transform: translateX(-100px);
+  }
+  .document-overlay {
+    visibility: visible;
+    opacity: .6;
+  }
+}
+
+.document-overlay {
+  background: white;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease .5s;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}

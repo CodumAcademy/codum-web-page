@@ -1,0 +1,28 @@
+query ($page: Int, $perPage: Int, $query: String, $orderBy: String) {
+  users(page: $page, perPage: $perPage, query: $query, orderBy: $orderBy) {
+    page
+    perPage
+    count
+    rows {
+      id
+      fullName
+      email
+      birtday
+      identityDoc
+      phone
+      isAdmin
+      howDidYouFindUs
+      howDidYouFindUsText
+      quizUserSummaries {
+        id
+        finished
+        approved
+        successAnswers
+        failedAnswers
+        totalAnswers
+        quizId
+        userId
+      }
+    }
+  }
+}

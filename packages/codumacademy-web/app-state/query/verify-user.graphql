@@ -1,0 +1,50 @@
+query {
+  verify {
+        token,
+        user {
+          id
+          fullName
+          email
+          isAdmin
+          birtday
+          typeIdentityDocId
+          identityDoc
+          phone
+          city {
+            id
+            name
+          }
+          state {
+            id
+            name
+          }
+          quizUserSummaries {
+            id
+            finished
+            approved
+            successAnswers
+            failedAnswers
+            totalAnswers
+            quizId
+            userId
+          }
+          userConvocationRequirements {
+            id
+            completed
+            convocationRequirementId
+          }
+          userScheduleMeetings {
+            id
+            date
+            convocationId
+            userId
+          }
+          userRequirementAuthorizations {
+            id
+            approved
+            convocationRequirementId
+            userId
+          }
+        }
+  }
+}

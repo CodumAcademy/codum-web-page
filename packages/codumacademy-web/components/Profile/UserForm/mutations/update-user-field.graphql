@@ -1,0 +1,7 @@
+mutation updateUserField($field: String!, $value: String!) {
+  updateUserField(field: $field, value: $value) {
+    success
+    error
+    message
+  }
+}

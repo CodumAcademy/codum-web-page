@@ -1,0 +1,80 @@
+query ($query: String) {
+  getUser(query: $query) {
+    id
+      fullName
+      email
+      birtday
+      identityDoc
+      phone
+      isAdmin
+      howDidYouFindUs
+      howDidYouFindUsText
+      city {
+        id
+        name
+      }
+      country {
+        id
+        name
+      }
+      state {
+        id
+        name
+      }
+      quizUserSummaries {
+        id
+        finished
+        approved
+        successAnswers
+        failedAnswers
+        totalAnswers
+        quizId
+        userId
+      }
+    	userScheduleMeetings {
+        id
+        date
+      }
+      userConvocationRequirements {
+        id
+        completed
+        convocationRequirement {
+          id
+          description
+          helpText
+          required
+          withQuiz
+          requiredApprove
+          quizId
+        }
+      }
+      quizUserSummaries {
+        id
+        finished
+        approved
+        successAnswers
+        failedAnswers
+        totalAnswers
+        quizId
+      }
+    	quizUserAnswers {
+        addicionalText
+        multiple
+        answers
+        quizQuestion {
+          id
+          title
+          quizId
+          description
+          quizQuestionTypeId
+        }
+        quizAnswer {
+          id
+          answer
+          isSuccessAnswer
+          allowAddicionalText
+          quizQuestionId
+        }
+      }
+  }
+}

@@ -1,0 +1,10 @@
+mutation generateQuestionsOrGetQuiz($quizId: Int!) {
+  generateQuestionsOrGetQuiz(quizId: $quizId) {
+    id
+    title
+    description
+    answersNumber
+    isPoll
+    convocationRequirementId
+  }
+}

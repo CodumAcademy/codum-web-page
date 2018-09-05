@@ -1,0 +1,9 @@
+query getStates($where: String!) {
+  states(query: $where) {
+    rows {
+      id
+      name
+      countryId
+    }
+  }
+}
