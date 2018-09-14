@@ -115,15 +115,12 @@ const Register = props => (
     )}
     {props.isPartLoading && <InPartLoading />}
     <a
-      href={
-        props.totalCompleted === 3 &&
-        "https://docs.google.com/forms/d/1fKDXTQ4i01nrp65055rihv6a1Ks_mPoN01NoCAF_7X4/edit"
-      }
+      href="https://docs.google.com/forms/d/1fKDXTQ4i01nrp65055rihv6a1Ks_mPoN01NoCAF_7X4/edit"
       target="_blank"
       rel="noopener noreferrer"
     >
-      ¡¡¡IMPORTANTE no olvides llenar el formulario de Carecterización
-      Socioeconómica AQUI!!!
+      IMPORTANTE: no olvides llenar el formulario de Carecterización
+      Socioeconómica AQUÍ
     </a>
   </Container>
 );
