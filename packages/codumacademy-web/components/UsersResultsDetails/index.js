@@ -129,14 +129,17 @@ const ResultsDetails = ({
                               summaries[
                                 requirement.convocationRequirement.quizId
                               ].successAnswers
-                            }({calcPercent(
+                            }
+                            (
+                            {calcPercent(
                               summaries[
                                 requirement.convocationRequirement.quizId
                               ].successAnswers,
                               summaries[
                                 requirement.convocationRequirement.quizId
                               ].totalAnswers
-                            )}%)
+                            )}
+                            %)
                           </p>
                         </div>
                         <div className="item failed">
@@ -147,14 +150,16 @@ const ResultsDetails = ({
                                 requirement.convocationRequirement.quizId
                               ].failedAnswers
                             }
-                            ({calcPercent(
+                            (
+                            {calcPercent(
                               summaries[
                                 requirement.convocationRequirement.quizId
                               ].failedAnswers,
                               summaries[
                                 requirement.convocationRequirement.quizId
                               ].totalAnswers
-                            )}%)
+                            )}
+                            %)
                           </p>
                         </div>
                         <div className="item resume">

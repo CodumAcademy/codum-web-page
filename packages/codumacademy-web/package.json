@@ -6,12 +6,13 @@
   "scripts": {
     "build": "./node_modules/.bin/next build",
     "dev": "npm run lint && npm run clean-cache && node server.js",
-    "lint": "eslint --fix --ext .js pages components containers utils ../codumacademy-core",
+    "lint": "eslint --fix --ext .js pages components containers utils ./packages/codumacademy-core",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
     "fast-prod": "./node_modules/.bin/next build && node server.js",
     "prod": "npm run lint && npm run clean-cache && ./node_modules/.bin/next build && node server.js NODE_ENV=production"
   },
   "dependencies": {
+    "@prettier/plugin-php": "prettier/plugin-php",
     "animate.css": "^3.6.1",
     "apollo-boost": "^0.1.6",
     "apollo-cache-inmemory": "^1.2.1",
@@ -23,8 +24,6 @@
     "apollo-link-state": "^0.4.1",
     "apollo-link-ws": "^1.0.8",
     "apollo-utilities": "^1.0.12",
-    "codumacademy-core": "../codumacademy-core",
-    "components": "./components",
     "compression": "^1.7.2",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
