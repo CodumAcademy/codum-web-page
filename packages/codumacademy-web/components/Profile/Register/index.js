@@ -70,9 +70,7 @@ const Register = props => (
           <Title>¡Felicitaciones!</Title>
           <p>
             Has superado exitosamente las pruebas de esta primera fase del
-            proceso. Ahora prepárate para el gran reto de programación que
-            realizaremos el sábado 7 de julio. En los próximos días recibirás la
-            información en tu correo electrónico.
+            proceso.
           </p>
         </div>
       )}
@@ -116,6 +114,17 @@ const Register = props => (
       </QuizAppContainer>
     )}
     {props.isPartLoading && <InPartLoading />}
+    <a
+      href={
+        props.totalCompleted === 3 &&
+        "https://docs.google.com/forms/d/1fKDXTQ4i01nrp65055rihv6a1Ks_mPoN01NoCAF_7X4/edit"
+      }
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ¡¡¡IMPORTANTE no olvides llenar el formulario de Carecterización
+      Socioeconómica AQUI!!!
+    </a>
   </Container>
 );
 Register.propTypes = {

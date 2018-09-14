@@ -62,7 +62,8 @@ class Footer extends React.Component {
                   itemProp="openingHours"
                   content="Mo,Tu,We,Th,Fr 08:00-18:00"
                 >
-                  Lunes a viernes <br />8:00 AM - 6:00 PM
+                  Lunes a viernes <br />
+                  8:00 AM - 6:00 PM
                 </span>
               </div>
             </TopContentItem>
