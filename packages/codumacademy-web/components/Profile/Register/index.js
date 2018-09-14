@@ -105,6 +105,16 @@ const Register = props => (
               disabled={!props.canSchedule || props.disableds[item.id]}
             />
           ))}
+          <a
+            href={
+              props.totalCompleted === 3 &&
+              "https://docs.google.com/forms/d/1fKDXTQ4i01nrp65055rihv6a1Ks_mPoN01NoCAF_7X4/edit"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Carecterización socioeconómica
+          </a>
         </ListContainer>
       )}
     {props.currentQuiz.id && (

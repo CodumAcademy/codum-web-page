@@ -45,7 +45,8 @@ const UsersResults = props => (
 
             {props.currentConvocation.convocationRequirements.map(item => (
               <li key={item.id}>
-                <label htmlFor={`item-${item.id}`}>{/* eslint-disable-line */}
+                <label htmlFor={`item-${item.id}`}>
+                  {/* eslint-disable-line */}
                   <input
                     type="checkbox"
                     onClick={props.onCheckRequirement(item)}
