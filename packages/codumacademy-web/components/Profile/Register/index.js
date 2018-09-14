@@ -119,7 +119,7 @@ const Register = props => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      IMPORTANTE: no olvides llenar el formulario de Carecterización
+      IMPORTANTE: No olvides llenar el formulario de Carecterización
       Socioeconómica AQUÍ
     </a>
   </Container>
