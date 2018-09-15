@@ -76,9 +76,10 @@ class Footer extends React.Component {
                 <span
                   className="small-light"
                   itemProp="address"
-                  content="Carrera 19C # 91-63 Piso 5 Bogotá, Colombia"
+                  content="Cra 11B #99-25 Oficina 13-104 - Edificio We Work, Bogotá, Colombia"
                 >
-                  Ak. 19 # 90-10 - Oficina 501, Bogotá, Colombia
+                  Cra 11B # 99 - 25 Oficina 13-104 - Edificio We Work, Bogotá,
+                  Colombia
                 </span>
               </div>
             </TopContentItem>
