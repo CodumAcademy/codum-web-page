@@ -21,7 +21,7 @@ const Launch = () => (
       </Helmet>
       <TopNavigation />
       <HeaderTypeOne {...headerData} />
-      <Countdown deadline="Jul 23 2018 00:00:00" />
+      <Countdown deadline="Oct 24 2018 00:00:00" />
       <Footer marginTop="20%" />
     </section>
   </CheckLogin>
