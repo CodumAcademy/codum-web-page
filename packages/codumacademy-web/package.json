@@ -9,7 +9,7 @@
     "lint": "eslint --fix --ext .js pages components containers utils ./packages/codumacademy-core",
     "clean-cache": "rimraf -rf ./node_modules/.cache",
     "fast-prod": "./node_modules/.bin/next build && node server.js",
-    "prod": "npm run lint && npm run clean-cache && ./node_modules/.bin/next build && node server.js NODE_ENV=production"
+    "start": "npm run lint && npm run clean-cache && ./node_modules/.bin/next build && node server.js NODE_ENV=production"
   },
   "dependencies": {
     "@prettier/plugin-php": "prettier/plugin-php",
