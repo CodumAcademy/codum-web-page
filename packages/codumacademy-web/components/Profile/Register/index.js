@@ -70,7 +70,8 @@ const Register = props => (
           <Title>¡Felicitaciones!</Title>
           <p>
             Has superado exitosamente las pruebas de esta primera fase del
-            proceso. En los próximos días recibirás mas información en tu correo electrónico.
+            proceso. En los próximos días recibirás mas información en tu correo
+            electrónico.
           </p>
         </div>
       )}
