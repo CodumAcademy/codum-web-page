@@ -48,29 +48,12 @@ const dummyData = {
       question: "¿CUÁLES SON LOS REQUISITOS PARA PARTICIPAR EN EL PROGRAMA?",
       answer: `
       <ul style="margin-left: 30px">
-        <li>Pertenecer a estrato 2 o 3.</li>
-        <li>Tener 17 años cumplidos.</li>
-        <li>No ser beneficiario de ningún tipo de beca.</li>
-        <li>Haber finalizado un programa de formación tecnológica afín con la programación, o estar cursando una carrera profesional afín con el pénsum propuesto.</li>
-        <li>Certificar la finalización de su educación secundaria en una institución educativa pública debidamente registrada ante el Ministerio de Educación Nacional.</li>
-        <li>Conocimientos básicos de inglés e informática.</li>
-        <li>Acreditar calificaciones por encima de 3,5 para materias relacionadas con el proceso de formación.</li>
-      </ul>
-      <br />
-      <p>
-      Si cumples con todos los requisitos puedes aplicar al proceso y pasar los siguientes filtros del proceso de selección:</p>
-      <br />
-      <ul style="margin-left: 30px">
-        <li>Prueba de competencias blandas, cálculo e inglés.</li>
-        <li>Reto de programación.</li>
-      </ul>
-      <br />
-      <p>Al finalizar el reto aplicaremos:</p>
-      <br>
-      <ul style="margin-left: 30px">
-        <li>Prueba DISC.</li>
-        <li>Caracterización socioeconómica.</li>
-        <li>Esto nos permitirá hacer un acompañamiento individualizado a nuestros estudiantes para asegurar su permanencia en el proceso y facilitar la vinculación al mundo laboral.</li>
+        <li>Tener entre 17 y 28 años.</li>
+        <li>Ser ciudadano colombiano.</li>
+        <li>Vivir en la ciudad de Bogotá o alrededores.</li>
+        <li>Ser recién graduado o estar cursando últimos semestres de una carrera profesional relacionada con programación.</li>
+        <li>Tener conocimientos  en algoritmia, programación básica y procedimental, programación orientada a objetos, bases de datos relacionales y SQL.</li>
+        <li>Completar de manera exitosa todas las pruebas solicitadas por Codum Academy.</li>
       </ul>`
     },
     {
