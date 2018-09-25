@@ -38,7 +38,9 @@ Front end del sitio web.
 
 ## Ejecución
 
-2. Iniciar el backend
+Antes de iniciar cuaquiera de los procesos, los archivos `.env` de cada paquete deben ser configurados.
+
+1. Iniciar el backend
 
 ```sh
 $ cd packages/codumacademy-graphql-server
@@ -46,10 +48,23 @@ $ npm build
 $ npm start
 ```
 
-3. Iniciar el frontend
+2. Iniciar el frontend
 
 ```sh
 $ cd packages/codumacademy-web
 $ npm build
 $ npm start
 ```
+
+## Configuración en el ambiente de producción
+
+Toda la infrastructura esta en AWS:
+
+1. Un servidor para el backend
+2. Un servidor para el frontend
+3. Un RDS con la base de datos en MySQL
+4. Route53 para la adminstración del dominio
+
+Ambos servidores usan [PM2](https://github.com/Unitech/pm2) junto a Nginx para mantere el proceso corriendo y recibir peticiones http.
+
+El certificado SSL es auto generado usando [Let's Encrypt](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04).
