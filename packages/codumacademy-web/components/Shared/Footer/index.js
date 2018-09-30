@@ -63,7 +63,8 @@ class Footer extends React.Component {
                   itemProp="openingHours"
                   content="Mo,Tu,We,Th,Fr 08:00-18:00"
                 >
-                  Lunes a viernes <br />8:00 AM - 6:00 PM
+                  Lunes a viernes <br />
+                  8:00 AM - 6:00 PM
                 </span>
               </div>
             </TopContentItem>
@@ -76,7 +77,8 @@ class Footer extends React.Component {
                 <span
                   className="small-light"
                   itemProp="address"
-                  content="Carrera 19C # 91-63 Piso 5 Bogotá, Colombia"
+                  content="Cra 11B # 99 - 25 Oficina 11-111 - Edificio We Work, Bogotá,
+                  Colombia"
                 >
                   Cra 11B # 99 - 25 Oficina 11-111 - Edificio We Work, Bogotá,
                   Colombia

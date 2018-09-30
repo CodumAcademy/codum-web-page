@@ -38,7 +38,6 @@ export default class QuizUserAnswer extends Model<QuizUserAnswer> {
   @Column
   quizId: number;
 
-  @AllowNull(false)
   @ForeignKey(() => Convocation)
   @Column
   convocationId: number;

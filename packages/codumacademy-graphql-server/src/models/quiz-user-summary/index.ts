@@ -37,7 +37,6 @@ export default class QuizUserSummary extends Model<QuizUserSummary> {
   @Column
   userId: number;
 
-  @AllowNull(false)
   @ForeignKey(() => Convocation)
   @Column
   convocationId: number;

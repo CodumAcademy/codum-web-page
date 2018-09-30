@@ -5,20 +5,8 @@ const dummyData = {
       id: 1,
       title: "ESTUDIANTES",
       icon: "/static/images/icons/dumbbell.svg",
-      sufix: "17 a 30 años",
-      content: `
-        <p>Cursando programas en:</p>
-        <br />
-        <ul style="list-style-position: inside;">
-          <li>Ingeniería mecánica</li>
-          <li>Ingeniería eléctrica</li>
-          <li>Ingeniería electrónica</li>
-          <li>Ingeniería de sistemas</li>
-          <li>Diseño gráfico</li>
-          <li>Animación</li>
-          <li>Matemáticas</li>
-        </ul>
-      `
+      sufix: "17 a 28 años",
+      content: `<p>Recién egresados o cursando últimos semestres de una carrera profesional relacionada con programación.</p>`
     },
     {
       id: 2,

@@ -21,7 +21,7 @@ export const typeDefinitions = `
   }
   input QuizUserAnswerInput {
     addicionalText: String
-    quizAnswerId: String!
+    quizAnswerId: Int!
     quizId: Int!
     quizQuestionId: Int!
     multiple: Boolean

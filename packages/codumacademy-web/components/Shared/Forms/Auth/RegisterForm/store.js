@@ -43,7 +43,7 @@ const selectSearch = async (queryOpts, dataKey, client, cb) => {
       complete: true
     });
   } catch (e) {
-    console.error(e);// eslint-disable-line
+    console.error(e); // eslint-disable-line
   }
 };
 

@@ -1,5 +1,6 @@
 {
   "name": "codumacademy-graphql-server",
+  "version": "0.0.1",
   "scripts": {
     "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
     "dev": "npm-run-all --parallel start playground",
@@ -21,7 +22,6 @@
     "@sendgrid/mail": "^6.3.1",
     "@types/jsonwebtoken": "^7.2.7",
     "bcryptjs": "2.4.3",
-    "codumacademy-core": "../codumacademy-core",
     "dotenv": "^6.0.0",
     "glob": "^7.1.2",
     "graphql-yoga": "1.14.0",
