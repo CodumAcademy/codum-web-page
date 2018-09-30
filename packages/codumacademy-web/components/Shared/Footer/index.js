@@ -47,6 +47,7 @@ class Footer extends React.Component {
               >
                 codumacademy@imaginamos.co
               </a>
+              <p>(+57) 350 471 93 14</p>
             </TopContentItem>
             <TopContentItem
               itemScope
@@ -77,7 +78,8 @@ class Footer extends React.Component {
                   itemProp="address"
                   content="Carrera 19C # 91-63 Piso 5 Bogotá, Colombia"
                 >
-                  Ak. 19 # 90-10 - Oficina 501, Bogotá, Colombia
+                  Cra 11B # 99 - 25 Oficina 11-111 - Edificio We Work, Bogotá,
+                  Colombia
                 </span>
               </div>
             </TopContentItem>
@@ -131,8 +133,8 @@ class Footer extends React.Component {
         >
           <MapContainer>
             <iframe
-              title="Imaginamos"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.538853778449!2d-74.05802248551738!3d4.67597214317416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9aed2fb7934f%3A0xd3d2f7e52b7cfce6!2sImaginamos.com!5e0!3m2!1ses-419!2sco!4v1527523941057"
+              title="Codumacademy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5008613186346!2d-74.04549929879083!3d4.682660047708916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a96e3478f23%3A0x38c16e0368c9d4c5!2sCra.+11B+%2399-25%2C+Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1538328552553"
               width="600"
               height="450"
               frameBorder="0"
