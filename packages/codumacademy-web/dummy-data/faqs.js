@@ -5,10 +5,10 @@ const dummyData = {
       id: 1,
       question: "¿QUÉ ES EL PROGRAMA Y A QUIÉN VA DIRIGIDO?",
       answer: `
-      <p>Es un programa de formación complementaria que busca desarrollar en jóvenes estudiantes de carreras como ingeniería de sistemas, matemáticas, ingeniería de software y otras afines, habilidades técnicas y profesionales para:</p>
+      <p>Es un programa de formación complementaria que busca desarrollar en jóvenes estudiantes de carreras afín con la programación, habilidades técnicas y profesionales para:</p>
       <br />
       <ul style="margin-left: 30px">
-        <li>Desempeñarse como Arquitectos de software capaces de diseñar, crear e implementar sistemas informáticos.</li>
+        <li>Desempeñarse como desarrolladores de software capaces de diseñar, crear e implementar sistemas informáticos.</li>
         <li>Adaptarse y asumir los retos que presenta el mundo digital.</li>
         <li>Comunicarse de manera efectiva con su equipo y trabajar de manera apasionada y autónoma.</li>
         <li>Entender las necesidades de las empresas para enfrentarse a la cuarta revolución industrial.</li>
@@ -19,13 +19,13 @@ const dummyData = {
     },
     {
       id: 2,
-      question: "¿CUÁL ES LA METODOLOGÍA ?",
+      question: "¿CUÁL ES LA METODOLOGÍA?",
       answer: `
       <ul style="margin-left: 30px">
         <li>Trabajamos a partir de proyectos en parejas o equipos, para apoyarse entre sí y entender diferentes conceptos.</li>
         <li>Generamos encuentros y charlas donde se discute información relevante y alineada a las necesidades tecnológicas del mercado actual.</li>
         <li>Desarrollamos un portafolio completo basado en encuentros con clientes reales.
-          <li>Impartimos un currículo acorde a las demandas reales de la industria.</li>
+        <li>Impartimos un currículo acorde a las demandas reales de la industria.</li>
       </ul>
       `
     },
@@ -33,14 +33,14 @@ const dummyData = {
       id: 3,
       question: "¿CUÁL ES LA INTENSIDAD HORARIA DEL PROGRAMA?",
       answer: `
-      <p>El pensum está organizado en 7 bloques de formación con una duración de 6 semanas cada uno para una duración total de 10 meses. Cada bloque tiene 160 horas de formación organizadas así:</p>
+      <p>El pensum está organizado en 7 bloques de formación con una duración de 6 semanas cada uno para un total de 10 meses:</p>
+      <p>Tiene un componente presencial y otro virtual distribuidos de la siguiente manera:</p>
       <br />
-
-          <ul style="margin-left: 30px">
-            <li>30% trabajo académico.</li>
-            <li>30% encuentros vía streaming.</li>
-            <li>40% trabajo autónomo y desarrollo de proyectos.</li>
-          </ul>
+      <p><strong>Presencial:</strong> Encuentros tipo taller para profundización conceptual y mentorías especializadas. (4 horas semanales)</p>
+      <br />
+      <p><strong>Virtual:</strong> Realización de la totalidad de los cursos definidos en la plataforma virtual de aprendizaje. (10 horas semanales)*</p>
+      <br />
+      <p><small>*Estos son los tiempos máximos por semana. Para "virtual" el tiempo puede variar de acuerdo al desempeño del estudiante al momento de realizar las actividades.</small></p>
       `
     },
     {
@@ -63,7 +63,8 @@ const dummyData = {
     },
     {
       id: 6,
-      question: "¿CÓMO SE ASEGURA LA VINCULACIÓN LABORAL AL FINALIZAR EL PERIODO DE FORMACIÓN?",
+      question:
+        "¿CÓMO SE ASEGURA LA VINCULACIÓN LABORAL AL FINALIZAR EL PERIODO DE FORMACIÓN?",
       answer: `<p>La vinculación laboral no se asegura desde el proceso de formación, lo que posibilitamos es que nuestros estudiantes participen en el proceso de selección que habitualmente se aplica a todos los candidatos en las compañías aliadas del programa, sin embargo, su contratación depende exclusivamente de los resultados obtenidos en dicho proceso de selección y el cumplimiento de los requisitos que internamente exija cada empresa a sus colaboradores.</p>`
     }
   ]

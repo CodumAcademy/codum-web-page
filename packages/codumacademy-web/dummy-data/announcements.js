@@ -1,6 +1,6 @@
 /* eslint-disable */
 const dummyData = {
-    cards: [
+  cards: [
     {
       id: 1,
       title: "ESTUDIANTES",
@@ -23,10 +23,11 @@ const dummyData = {
     },
     {
       id: 4,
-      title: "CÓDIGO",
+      title: "PROGRAMACIÓN",
       icon: "/static/images/icons/computer.svg",
       prefix: "Conocimiento en",
-      content: "<p>Estudiantes con conocimiento y noción básica en código</p>"
+      content:
+        "<p>Estudiantes con conocimientos en algoritmia, programación básica y procedimental, programación orientada a objetos, bases de datos relacionales y SQL</p>"
     },
     {
       id: 5,
@@ -38,31 +39,35 @@ const dummyData = {
       id: 6,
       title: "INTERESADOS",
       icon: "/static/images/icons/transport.svg",
-      content: "<p>En ser parte del equipo de desarrollo de las Startup con mayor crecimiento en la industria tecnológica</p>"
-    },
+      content:
+        "<p>En ser parte del equipo de desarrollo de las Startup con mayor crecimiento en la industria tecnológica</p>"
+    }
   ],
   testimonies: [
     {
       id: 1,
       title: "Imaginamos es transformación digital",
-      description: "Gente dinámica y apasionada que quiera desarrollar las próximas soluciones de los entornos digitales.",
+      description:
+        "Gente dinámica y apasionada que quiera desarrollar las próximas soluciones de los entornos digitales.",
       videoThumbnail: "//i.ytimg.com/vi/I-BLr-g1Jxs/hqdefault.jpg",
       videoUrl: "//www.youtube.com/embed/I-BLr-g1Jxs"
     },
     {
       id: 2,
       title: "Buscamos nuevos talentos",
-      description: "Inscríbete en Codum Academy y aprende de la mano de los mejores en la industria TI.",
+      description:
+        "Inscríbete en Codum Academy y aprende de la mano de los mejores en la industria TI.",
       videoThumbnail: "//i.ytimg.com/vi/fHL_wUlgkjk/hqdefault.jpg",
       videoUrl: "//www.youtube.com/embed/fHL_wUlgkjk"
     },
     {
       id: 3,
       title: "Rappi es innovación",
-      description: "En Rappi tendrás las mejores herramientas para desarrollar tu carrera profesional.",
+      description:
+        "En Rappi tendrás las mejores herramientas para desarrollar tu carrera profesional.",
       videoThumbnail: "//i.ytimg.com/vi/0QGY6N2lHTg/hqdefault.jpg",
       videoUrl: "//www.youtube.com/embed/0QGY6N2lHTg"
-    },
+    }
   ]
 };
 

@@ -1,7 +1,7 @@
 const routes = require("next-routes")();
 
 routes.add("index", "/");
-routes.add("team", "/equipo");
+routes.add("team", "/apoyados-por");
 routes.add("nosotros", "/nosotros");
 routes.add("convocatoria", "/convocatoria");
 routes.add("faqs", "/preguntas-frecuentes");

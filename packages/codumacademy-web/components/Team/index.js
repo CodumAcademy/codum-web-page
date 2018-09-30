@@ -13,11 +13,11 @@ const TeamPage = () => (
   <CheckLogin>
     <section className="team with-green-shape">
       <Helmet>
-        <title>Equipo</title>
+        <title>Apoyados por</title>
       </Helmet>
       <TopNavigation />
       <div>
-        <H1>Equipo</H1>
+        <H1>Apoyados por</H1>
         <TeamBoxes data={[]} />
       </div>
       <Footer />
