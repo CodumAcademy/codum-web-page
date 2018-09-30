@@ -1,6 +1,6 @@
 const dummyData = {
   description:
-    "Somos una iniciativa apoyada por Rappi e Imaginamos que prepara e impulsa a los mejores talentos para el mundo digital, fortaleciendo sus habilidades y brindando oportunidades de crecimiento y desarrollo.",
+    "Buscamos inspirar a jóvenes apasionados por la tecnología, a través de un programa enfocado en la formación integral de desarrolladores de software para facilitar su acceso a oportunidades laborales en el sector.",
   boxes: [
     {
       id: 1,
@@ -14,21 +14,21 @@ const dummyData = {
       title: "Metodología",
       icon: "/static/images/icons/file-1.svg",
       content:
-        "A través de un programa de formación complementaria, buscamos desarrollar habilidades técnicas y profesionales en jóvenes estudiantes de carreras como ingeniería de sistemas, matemáticas, ingeniería de software y otras afines."
+        "Nuestro modelo de formación combina la enseñanza presencial y virtual mediante el planteamiento y solución de problemas a casos reales de la industria, fortaleciendo las habilidades técnicas y profesionales de nuestros estudiantes."
     },
     {
       id: 3,
       title: "Conexiones",
       icon: "/static/images/icons/cpu.svg",
       content:
-        "Fortalecemos las habilidades de los apasionados por la tecnología a través de retos reales de la industria y los conectamos con oportunidades laborales que mejoren su calidad de vida."
+        "Formamos a los apasionados por la tecnología y los conectamos con oportunidades laborales que mejoren su calidad de vida."
     },
     {
       id: 4,
       title: "Conocimiento",
       icon: "/static/images/icons/bulb.svg",
       content:
-        "Formamos arquitectos de software capaces de diseñar, crear e implementar sistemas informáticos, adaptarse y asumir los retos que presenta el entorno digital, así como entender las necesidades de las empresas para enfrentarse a la cuarta revolución industrial."
+        "Formamos desarrolladores de software capaces de diseñar, crear e implementar sistemas informáticos, adaptarse y asumir los retos que presenta el entorno digital, así como entender las necesidades de las empresas para enfrentarse a la cuarta revolución industrial."
     }
   ]
 };
