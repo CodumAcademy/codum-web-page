@@ -93,9 +93,9 @@ const TopNavigation = props => (
         <Link href="/convocatoria">
           <NavAnchor>Convocatoria</NavAnchor>
         </Link>
-        <Link href="/lanzamiento">
+        {/* <Link href="/lanzamiento">
           <NavAnchor>Lanzamiento</NavAnchor>
-        </Link>
+        </Link> */}
         <Link href="/equipo">
           <NavAnchor>Equipo</NavAnchor>
         </Link>
