@@ -105,14 +105,14 @@ class RegisterForm extends React.Component {
           {this.errorMessageOnErrors("identityDoc")}
         </label>
         <label className="city width-50 margin-2-percent" htmlFor="state">
-          <span>Departamento de nacimiento*</span>
+          <span>Departamento de residencia*</span>
           <Async
             className={`generic-input select ${
               touched.stateId && errors.stateId ? "error" : ""
             }`}
             name="states"
             loadOptions={this.props.getStates}
-            placeholder="Ingresa Departamento de nacimiento"
+            placeholder="Ingresa Departamento de residencia"
             searchPromptText="Buscar..."
             onChange={this.props.onSelectChange("stateId")}
             value={this.props.currentState}
@@ -122,7 +122,7 @@ class RegisterForm extends React.Component {
           {this.errorMessageOnErrors("stateId")}
         </label>
         <label className="town width-50" htmlFor="city">
-          <span>Ciudad de nacimiento*</span>
+          <span>Ciudad de residencia*</span>
           <Async
             className={`generic-input select ${
               touched.cityId && errors.cityId ? "error" : ""
@@ -130,7 +130,7 @@ class RegisterForm extends React.Component {
             name="cities"
             autoload={false}
             loadOptions={this.props.getCities}
-            placeholder="Ingresa Ciudad/Municipio de nacimiento"
+            placeholder="Ingresa Ciudad/Municipio de residencia"
             searchPromptText="Buscar..."
             onChange={this.props.onSelectChange("cityId")}
             value={this.props.currentCity}

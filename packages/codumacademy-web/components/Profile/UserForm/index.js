@@ -91,14 +91,14 @@ const UserForm = props => (
         />
       </label>
       <label className="city width-50 margin-2-percent" htmlFor="state">
-        <span>Departamento de nacimiento*</span>
+        <span>Departamento de residencia*</span>
         <Async
           className={`generic-input select ${
             !props.isEditing ? "disabled" : ""
           }`}
           name="states"
           loadOptions={props.getStates}
-          placeholder="Ingresa Departamento de nacimiento"
+          placeholder="Ingresa Departamento de residencia"
           searchPromptText="Buscar..."
           onChange={props.onSelectChange("stateId")}
           value={props.currentState}
@@ -107,7 +107,7 @@ const UserForm = props => (
         />
       </label>
       <label className="town width-50" htmlFor="city">
-        <span>Ciudad de nacimiento*</span>
+        <span>Ciudad de residencia*</span>
         <Async
           className={`generic-input select ${
             !props.isEditing ? "disabled" : ""
@@ -115,7 +115,7 @@ const UserForm = props => (
           name="cities"
           autoload={false}
           loadOptions={props.getCities}
-          placeholder="Ingresa Ciudad/Municipio de nacimiento"
+          placeholder="Ingresa Ciudad/Municipio de residencia"
           searchPromptText="Buscar..."
           value={props.currentCity}
           disabled={!props.currentState || !props.isEditing}
