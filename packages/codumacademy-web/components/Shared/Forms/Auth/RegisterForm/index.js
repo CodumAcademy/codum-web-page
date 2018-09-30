@@ -12,6 +12,12 @@ import GenericButton from "../../../UI/Buttons/GenericButton";
 import withStore from "./store";
 
 class RegisterForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showOtherOption: false
+    };
+  }
   // static getDerivedStateFromProps() {
   //   // console.log(nextProps);
   //   // if (nextProps.values !== this.props.values) {
@@ -26,6 +32,21 @@ class RegisterForm extends React.Component {
     this.props.touched[key] && this.props.errors[key] ? (
       <ErrorContent>{this.props.errors[key]}</ErrorContent>
     ) : null;
+
+  onShowOtherOption = evt => {
+    const option = evt.target.value;
+    if (option == 14) {
+      console.log(option);
+      this.setState({
+        showOtherOption: true
+      });
+    } else {
+      this.setState({
+        showOtherOption: false
+      });
+    }
+  };
+
   render() {
     const {
       values,
@@ -140,6 +161,83 @@ class RegisterForm extends React.Component {
           />
           {this.errorMessageOnErrors("cityId")}
         </label>
+        <label className="university width-100" htmlFor="university">
+          <span>Universidad*</span>
+          <input
+            name="university"
+            className={this.classNameProsOnErrors("university")}
+            type="text"
+            placeholder="Ingresa aquí tu Universidad"
+            id="university"
+            autoComplete="university"
+            onChange={handleChange}
+            value={values.university || ""}
+          />
+          {this.props.touched.university && this.props.errors.university ? (
+            <ErrorContent>{this.props.errors.university}</ErrorContent>
+          ) : null}
+        </label>
+        <label className="career width-100" htmlFor="career">
+          <span>Programa / Carrera*</span>
+          <input
+            name="career"
+            className={this.classNameProsOnErrors("career")}
+            type="text"
+            placeholder="Ingresa aquí tus Programa / Carrera"
+            id="career"
+            autoComplete="name"
+            onChange={handleChange}
+            value={values.career || ""}
+          />
+          {this.props.touched.career && this.props.errors.career ? (
+            <ErrorContent>{this.props.errors.career}</ErrorContent>
+          ) : null}
+        </label>
+        <label className="last-semester width-100" htmlFor="id-type">
+          <span>Último semestre finalizado*</span>
+          <div className="select-wrapper">
+            <select
+              className={this.classNameProsOnErrors("lastSemester")}
+              id="id-type"
+              name="lastSemester"
+              onChange={this.onShowOtherOption}
+              value={values.lastSemester}
+            >
+              <option value>--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">Estoy en primer semestre</option>
+              <option value="12">Soy graduado de pregrado</option>
+              <option value="13">Estoy estudiando posgrado</option>
+              <option value="14">Otro</option>
+            </select>
+          </div>
+          {this.errorMessageOnErrors("lastSemester")}
+        </label>
+        {this.state.showOtherOption && (
+          <label className="other width-100" htmlFor="other">
+            <span>Describe otra opción</span>
+            <input
+              className={this.classNameProsOnErrors("other")}
+              type="text"
+              placeholder="Ingresa otra opción"
+              id="other"
+              autoComplete="other"
+              name="other"
+              onChange={handleChange}
+              value={values.other}
+            />
+            {this.errorMessageOnErrors("other")}
+          </label>
+        )}
         <label className="phone width-50" htmlFor="phone">
           <span>Teléfono de contacto*</span>
           <input
