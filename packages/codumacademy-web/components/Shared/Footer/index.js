@@ -104,10 +104,10 @@ class Footer extends React.Component {
             {/* <Link href="/lanzamiento">
               <a>Lanzamiento</a>
             </Link> */}
-            <Link href="/equipo">
-              <a>Equipo</a>
+            <Link href="/apoyados-por">
+              <a>Apoyados por</a>
             </Link>
-            <Link href="/equipo">
+            <Link href="/plan-de-estudios">
               <a>Plan de estudios</a>
             </Link>
             <Link href="/preguntas-frecuentes">

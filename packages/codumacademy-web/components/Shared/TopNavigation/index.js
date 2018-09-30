@@ -96,8 +96,8 @@ const TopNavigation = props => (
         {/* <Link href="/lanzamiento">
           <NavAnchor>Lanzamiento</NavAnchor>
         </Link> */}
-        <Link href="/equipo">
-          <NavAnchor>Equipo</NavAnchor>
+        <Link href="/apoyados-por">
+          <NavAnchor>Apoyados por</NavAnchor>
         </Link>
         <Link href="/plan-de-estudios">
           <NavAnchor>Plan de estudios</NavAnchor>
