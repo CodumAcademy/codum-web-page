@@ -25,7 +25,7 @@ const Register = props => (
         <br />
         <p>
           Aunque hoy no has pasado la prueba, no te desanimes; puedes
-          presentarte nuevamente en la convocatoria que abriremos en Agosto.
+          presentarte nuevamente en la convocatoria que abriremos en Noviembre.
         </p>
         <br />
         <p>
