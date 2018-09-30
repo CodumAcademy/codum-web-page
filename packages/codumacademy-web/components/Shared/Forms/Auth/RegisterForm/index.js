@@ -185,7 +185,7 @@ class RegisterForm extends React.Component {
             type="text"
             placeholder="Ingresa aquí tus Programa / Carrera"
             id="career"
-            autoComplete="name"
+            autoComplete="career"
             onChange={handleChange}
             value={values.career || ""}
           />
