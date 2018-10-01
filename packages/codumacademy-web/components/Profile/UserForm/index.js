@@ -18,7 +18,7 @@ class UserForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showOtherOption: false
+      showOtherOption: this.props.user.semester == 14
     };
   }
 
@@ -37,6 +37,7 @@ class UserForm extends React.Component {
   };
 
   render() {
+    console.log("-----------------props---------------------: ", this.props);
     return (
       <UserFormContainer>
         {this.props.isLoading && (
@@ -154,30 +155,26 @@ class UserForm extends React.Component {
             <span>Universidad*</span>
             <input
               name="university"
-              className={`generic-input select ${
-                !this.props.isEditing ? "disabled" : ""
-              }`}
+              className={`generic-input`}
               type="text"
               placeholder="Ingresa aquí tu Universidad"
               id="university"
               autoComplete="university"
               onChange={this.props.onSelectChange("university")}
-              value={this.props.university || ""}
+              value={this.props.user.university || ""}
             />
           </label>
           <label className="career width-100" htmlFor="career">
             <span>Programa / Carrera*</span>
             <input
               name="career"
-              className={`generic-input select ${
-                !this.props.isEditing ? "disabled" : ""
-              }`}
+              className={`generic-input`}
               type="text"
               placeholder="Ingresa aquí tus Programa / Carrera"
               id="career"
               autoComplete="career"
               onChange={this.props.onSelectChange("career")}
-              value={this.props.career || ""}
+              value={this.props.user.career || ""}
             />
           </label>
           <label className="last-semester width-100" htmlFor="id-type">
@@ -188,9 +185,9 @@ class UserForm extends React.Component {
                   !this.props.isEditing ? "disabled" : ""
                 }`}
                 id="id-type"
-                name="lastSemester"
+                name="semester"
                 onChange={this.onShowOtherOption}
-                value={this.props.lastSemester}
+                value={this.props.user.semester}
               >
                 <option value>--</option>
                 <option value="1">1</option>
@@ -223,7 +220,7 @@ class UserForm extends React.Component {
                 autoComplete="other"
                 name="other"
                 onChange={this.props.handleChange("other")}
-                value={this.props.other}
+                value={this.props.user.other}
               />
             </label>
           )}
