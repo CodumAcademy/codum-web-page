@@ -160,8 +160,9 @@ class UserForm extends React.Component {
               placeholder="Ingresa aquí tu Universidad"
               id="university"
               autoComplete="university"
-              onChange={this.props.onSelectChange("university")}
+              onChange={this.props.handleChange("university")}
               value={this.props.user.university || ""}
+              onBlur={this.props.onInputReady("university")}
             />
           </label>
           <label className="career width-100" htmlFor="career">
@@ -173,8 +174,9 @@ class UserForm extends React.Component {
               placeholder="Ingresa aquí tus Programa / Carrera"
               id="career"
               autoComplete="career"
-              onChange={this.props.onSelectChange("career")}
+              onChange={this.props.handleChange("career")}
               value={this.props.user.career || ""}
+              onBlur={this.props.onInputReady("career")}
             />
           </label>
           <label className="last-semester width-100" htmlFor="id-type">
@@ -186,7 +188,10 @@ class UserForm extends React.Component {
                 }`}
                 id="id-type"
                 name="semester"
-                onChange={this.onShowOtherOption}
+                onChange={e => {
+                  this.onShowOtherOption(e);
+                  return this.props.handleChange("semester");
+                }}
                 value={this.props.user.semester}
               >
                 <option value>--</option>
@@ -211,9 +216,7 @@ class UserForm extends React.Component {
             <label className="other width-100" htmlFor="other">
               <span>Describe otra opción</span>
               <input
-                className={`generic-input select ${
-                  !this.props.isEditing ? "disabled" : ""
-                }`}
+                className={`generic-input`}
                 type="text"
                 placeholder="Ingresa otra opción"
                 id="other"
@@ -221,6 +224,7 @@ class UserForm extends React.Component {
                 name="other"
                 onChange={this.props.handleChange("other")}
                 value={this.props.user.other}
+                onBlur={this.props.onInputReady("other")}
               />
             </label>
           )}
