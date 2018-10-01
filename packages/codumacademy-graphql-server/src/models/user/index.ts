@@ -1,8 +1,21 @@
-import { Table, Column, Model, Default, HasMany, ForeignKey, BelongsTo, IsEmail, Unique, AllowNull, CreatedAt, UpdatedAt } from 'sequelize-typescript';
-import TypeIdentityDoc from "../typeidentitydoc"
-import Country from "../country"
-import State from "../state"
-import City from "../city"
+import {
+  Table,
+  Column,
+  Model,
+  Default,
+  HasMany,
+  ForeignKey,
+  BelongsTo,
+  IsEmail,
+  Unique,
+  AllowNull,
+  CreatedAt,
+  UpdatedAt
+} from "sequelize-typescript";
+import TypeIdentityDoc from "../typeidentitydoc";
+import Country from "../country";
+import State from "../state";
+import City from "../city";
 import QuizUserAnswer from "../quiz-user-answer";
 import QuizUserQuestion from "../quiz-user-question";
 import QuizUserSummary from "../quiz-user-summary";
@@ -15,7 +28,6 @@ import ConvocationUser from "../convocation-user";
   tableName: "Users"
 })
 export default class User extends Model<User> {
-
   @AllowNull(false)
   @Column
   fullName: string;
@@ -48,6 +60,21 @@ export default class User extends Model<User> {
 
   @Column
   howDidYouFindUsText: string;
+
+  @AllowNull(false)
+  @Column
+  university: string;
+
+  @AllowNull(false)
+  @Column
+  career: string;
+
+  @AllowNull(false)
+  @Column
+  lastSemester: number;
+
+  @Column
+  other: string;
 
   @Default(false)
   @Column
@@ -106,7 +133,6 @@ export default class User extends Model<User> {
   @HasMany(() => ConvocationUser)
   convocationUsers: ConvocationUser[];
 
-
   @CreatedAt
   @Column
   createdAt: Date;
@@ -114,5 +140,4 @@ export default class User extends Model<User> {
   @UpdatedAt
   @Column
   updatedAt: Date;
-
 }
