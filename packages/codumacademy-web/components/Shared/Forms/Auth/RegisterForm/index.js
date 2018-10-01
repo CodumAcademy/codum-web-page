@@ -36,7 +36,6 @@ class RegisterForm extends React.Component {
   onShowOtherOption = evt => {
     const option = evt.target.value;
     if (option == 14) {
-      console.log(option);
       this.setState({
         showOtherOption: true
       });
@@ -193,15 +192,18 @@ class RegisterForm extends React.Component {
             <ErrorContent>{this.props.errors.career}</ErrorContent>
           ) : null}
         </label>
-        <label className="last-semester width-100" htmlFor="id-type">
+        <label className="semester width-100" htmlFor="semester">
           <span>Último semestre finalizado*</span>
           <div className="select-wrapper">
             <select
-              className={this.classNameProsOnErrors("lastSemester")}
-              id="id-type"
-              name="lastSemester"
-              onChange={this.onShowOtherOption}
-              value={values.lastSemester}
+              className={this.classNameProsOnErrors("semester")}
+              id="id-semester"
+              name="semester"
+              onChange={e => {
+                this.onShowOtherOption(e);
+                return handleChange(e);
+              }}
+              value={values.semester}
             >
               <option value>--</option>
               <option value="1">1</option>
@@ -220,7 +222,7 @@ class RegisterForm extends React.Component {
               <option value="14">Otro</option>
             </select>
           </div>
-          {this.errorMessageOnErrors("lastSemester")}
+          {this.errorMessageOnErrors("semester")}
         </label>
         {this.state.showOtherOption && (
           <label className="other width-100" htmlFor="other">
