@@ -25,7 +25,7 @@ export const typeDefinitions = `
     cityId: Int!
     university: String!
     career: String!
-    lastSemester: Int!
+    semester: String!
     other: String
 
     typeIdentityDoc: TypeIdentityDoc
@@ -56,7 +56,7 @@ export const typeDefinitions = `
     howDidYouFindUsText: String
     university: String!
     career: String!
-    lastSemester: Int!
+    semester: String!
     other: String
 
     typeIdentityDocId: Int!
@@ -100,7 +100,7 @@ export const typeDefinitions = `
     cityId: Int!
     university: String!
     career: String!
-    lastSemester: Int!
+    semester: String!
     other: String
   }
 

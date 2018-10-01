@@ -12,7 +12,7 @@ mutation SignUp(
   $howDidYouFindUsText: String
   $university: String!
   $career: String!
-  $lastSemester: String!
+  $semester: String!
   $other: String
 ) {
   signup(
@@ -31,7 +31,7 @@ mutation SignUp(
       howDidYouFindUsText: $howDidYouFindUsText
       university: $university
       career: $career
-      lastSemester: $lastSemester
+      semester: $semester
       other: $other
     }
   ) {

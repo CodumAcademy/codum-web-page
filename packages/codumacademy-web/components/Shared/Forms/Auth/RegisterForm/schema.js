@@ -19,7 +19,7 @@ const schema = object().shape({
   howDidYouFindUsText: string(),
   university: string().required("Requerido!"),
   career: string().required("Requerido!"),
-  lastSemester: string().required("Requerido!"),
+  semester: string().required("Requerido!"),
   other: string()
 });
 

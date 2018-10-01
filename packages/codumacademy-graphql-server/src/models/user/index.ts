@@ -71,7 +71,7 @@ export default class User extends Model<User> {
 
   @AllowNull(false)
   @Column
-  lastSemester: number;
+  semester: string;
 
   @Column
   other: string;
