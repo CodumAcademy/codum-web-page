@@ -91,14 +91,14 @@ const UserForm = props => (
         />
       </label>
       <label className="city width-50 margin-2-percent" htmlFor="state">
-        <span>Departamento de nacimiento*</span>
+        <span>Departamento de residencia*</span>
         <Async
           className={`generic-input select ${
             !props.isEditing ? "disabled" : ""
           }`}
           name="states"
           loadOptions={props.getStates}
-          placeholder="Ingresa Departamento de nacimiento"
+          placeholder="Ingresa Departamento de residencia"
           searchPromptText="Buscar..."
           onChange={props.onSelectChange("stateId")}
           value={props.currentState}
@@ -107,7 +107,7 @@ const UserForm = props => (
         />
       </label>
       <label className="town width-50" htmlFor="city">
-        <span>Ciudad de nacimiento*</span>
+        <span>Ciudad de residencia*</span>
         <Async
           className={`generic-input select ${
             !props.isEditing ? "disabled" : ""
@@ -115,7 +115,7 @@ const UserForm = props => (
           name="cities"
           autoload={false}
           loadOptions={props.getCities}
-          placeholder="Ingresa Ciudad/Municipio de nacimiento"
+          placeholder="Ingresa Ciudad/Municipio de residencia"
           searchPromptText="Buscar..."
           value={props.currentCity}
           disabled={!props.currentState || !props.isEditing}
@@ -123,6 +123,84 @@ const UserForm = props => (
           instanceId="cities"
         />
       </label>
+      <label className="university width-100" htmlFor="university">
+        <span>Universidad*</span>
+        <input
+          name="university"
+          className={`generic-input`}
+          type="text"
+          placeholder="Ingresa aquí tu Universidad"
+          id="university"
+          autoComplete="university"
+          onChange={props.handleChange("university")}
+          value={props.university}
+          onBlur={props.onInputReady("university")}
+          disabled={!props.isEditing}
+        />
+      </label>
+      <label className="career width-100" htmlFor="career">
+        <span>Programa / Carrera*</span>
+        <input
+          name="career"
+          className={`generic-input`}
+          type="text"
+          placeholder="Ingresa aquí tus Programa / Carrera"
+          id="career"
+          autoComplete="career"
+          onChange={props.handleChange("career")}
+          value={props.career}
+          onBlur={props.onInputReady("career")}
+          disabled={!props.isEditing}
+        />
+      </label>
+      <label className="last-semester width-100" htmlFor="id-type">
+        <span>Último semestre finalizado*</span>
+        <div className="select-wrapper">
+          <select
+            className={`generic-input select ${
+              !props.isEditing ? "disabled" : ""
+            }`}
+            id="id-type"
+            name="semester"
+            onChange={props.handleChange("semester")}
+            value={props.semester}
+            disabled={!props.isEditing}
+          >
+            <option value>--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">Estoy en primer semestre</option>
+            <option value="12">Soy graduado de pregrado</option>
+            <option value="13">Estoy estudiando posgrado</option>
+            <option value="14">Otro</option>
+          </select>
+        </div>
+      </label>
+      {props.semester == 14 && (
+        <label className="other width-100" htmlFor="other">
+          <span>Describe otra opción</span>
+          <input
+            className={`generic-input`}
+            type="text"
+            placeholder="Ingresa otra opción"
+            id="other"
+            autoComplete="other"
+            name="other"
+            onChange={props.handleChange("other")}
+            value={props.other}
+            onBlur={props.onInputReady("other")}
+            disabled={!props.isEditing}
+          />
+        </label>
+      )}
       <label className="phone width-50" htmlFor="phone">
         <span>Teléfono de contacto*</span>
         <input

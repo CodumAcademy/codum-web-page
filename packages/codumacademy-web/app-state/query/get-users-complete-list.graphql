@@ -1,4 +1,4 @@
-query ($page: Int, $perPage: Int, $query: String, $orderBy: String) {
+query($page: Int, $perPage: Int, $query: String, $orderBy: String) {
   users(page: $page, perPage: $perPage, query: $query, orderBy: $orderBy) {
     page
     perPage
@@ -13,6 +13,10 @@ query ($page: Int, $perPage: Int, $query: String, $orderBy: String) {
       isAdmin
       howDidYouFindUs
       howDidYouFindUsText
+      university
+      career
+      semester
+      other
       quizUserSummaries {
         id
         finished

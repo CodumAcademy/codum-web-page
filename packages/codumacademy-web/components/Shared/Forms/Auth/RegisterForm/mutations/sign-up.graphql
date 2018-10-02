@@ -1,19 +1,41 @@
-mutation SignUp($fullName: String!, $email: String!, $password: String!, $birtday: String!, $identityDoc: String!, $phone: String!, $typeIdentityDocId: Int!, $cityId: Int!, $stateId: Int!, $howDidYouFindUs: String! $howDidYouFindUsText: String){
-  signup(user: {
-    fullName: $fullName,
-    email: $email,
-    password: $password,
-    birtday: $birtday,
-    identityDoc: $identityDoc,
-    phone: $phone,
-    typeIdentityDocId: $typeIdentityDocId,
-    countryId: 47,
-    stateId: $stateId,
-    cityId: $cityId,
-    howDidYouFindUs: $howDidYouFindUs,
-    howDidYouFindUsText: $howDidYouFindUsText
-  }) {
-    token,
+mutation SignUp(
+  $fullName: String!
+  $email: String!
+  $password: String!
+  $birtday: String!
+  $identityDoc: String!
+  $phone: String!
+  $typeIdentityDocId: Int!
+  $cityId: Int!
+  $stateId: Int!
+  $howDidYouFindUs: String!
+  $howDidYouFindUsText: String
+  $university: String!
+  $career: String!
+  $semester: String!
+  $other: String
+) {
+  signup(
+    user: {
+      fullName: $fullName
+      email: $email
+      password: $password
+      birtday: $birtday
+      identityDoc: $identityDoc
+      phone: $phone
+      typeIdentityDocId: $typeIdentityDocId
+      countryId: 47
+      stateId: $stateId
+      cityId: $cityId
+      howDidYouFindUs: $howDidYouFindUs
+      howDidYouFindUsText: $howDidYouFindUsText
+      university: $university
+      career: $career
+      semester: $semester
+      other: $other
+    }
+  ) {
+    token
     user {
       id
       fullName
@@ -32,8 +54,8 @@ mutation SignUp($fullName: String!, $email: String!, $password: String!, $birtda
         name
       }
       quizUserSummaries {
-         id
-         quizId
+        id
+        quizId
       }
     }
   }

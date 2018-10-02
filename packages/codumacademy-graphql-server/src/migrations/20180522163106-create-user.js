@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Users', {
+    return queryInterface.createTable("Users", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -14,7 +14,7 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING,
-        unique : true,
+        unique: true,
         allowNull: false
       },
       password: {
@@ -27,7 +27,7 @@ module.exports = {
       },
       identityDoc: {
         type: Sequelize.STRING,
-        unique : true,
+        unique: true,
         allowNull: false
       },
       phone: {
@@ -47,32 +47,32 @@ module.exports = {
       typeIdentityDocId: {
         type: Sequelize.INTEGER,
         references: {
-            model: "TypeIdentityDocs",
-            key: "id"
+          model: "TypeIdentityDocs",
+          key: "id"
         },
         allowNull: false
       },
       countryId: {
         type: Sequelize.INTEGER,
         references: {
-            model: "Countries",
-            key: "id"
+          model: "Countries",
+          key: "id"
         },
         allowNull: false
       },
       stateId: {
         type: Sequelize.INTEGER,
         references: {
-            model: "States",
-            key: "id"
+          model: "States",
+          key: "id"
         },
         allowNull: false
       },
       cityId: {
         type: Sequelize.INTEGER,
         references: {
-            model: "Cities",
-            key: "id"
+          model: "Cities",
+          key: "id"
         },
         allowNull: false
       },
@@ -87,6 +87,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Users');
+    return queryInterface.dropTable("Users");
   }
 };
