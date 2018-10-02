@@ -197,8 +197,9 @@ const downloadExcel = props => async () => {
     );
 
     // <
-    const rows = users.reduce((acc, user) => {// eslint-disable-line
-      const newObj = Object.assign({}, { name: user.fullName });// eslint-disable-line
+    const rows = users.reduce((acc, user) => {
+      // eslint-disable-line
+      const newObj = Object.assign({}, { name: user.fullName }); // eslint-disable-line
       Object.keys(questionsRow).forEach(keyObj => {
         const questionAnswer = user.quizUserAnswers.find(
           answer =>
@@ -256,7 +257,7 @@ const downloadExcel = props => async () => {
     []
   );
 
-  const ExportJsonExcel = require("js-export-excel");// eslint-disable-line
+  const ExportJsonExcel = require("js-export-excel"); // eslint-disable-line
 
   const toExcel = new ExportJsonExcel(opts);
   toExcel.saveExcel();

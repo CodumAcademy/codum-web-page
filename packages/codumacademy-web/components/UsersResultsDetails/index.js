@@ -76,6 +76,28 @@ const ResultsDetails = ({
                 <p>{selectedUser.howDidYouFindUs}</p>
                 <p>{selectedUser.howDidYouFindUsText}</p>
               </div>
+              <div>
+                <h4>Universidad</h4>
+                <p>{selectedUser.university}</p>
+              </div>
+              <div>
+                <h4>Carrera</h4>
+                <p>{selectedUser.career}</p>
+              </div>
+              <div>
+                <h4>Ultimo semestre cursado</h4>
+                <p>
+                  {selectedUser.semester === "11" && "Estoy en primer semestre"}
+                  {selectedUser.semester === "12" && "Soy graduado de pregrado"}
+                  {selectedUser.semester === "13" &&
+                    "Estoy estudiando posgrado"}
+                  {selectedUser.semester === "14" && "Otro"}
+                </p>
+              </div>
+              <div>
+                <h4>Otra opción semestres cursados</h4>
+                <p>{selectedUser.other}</p>
+              </div>
             </UserData>
           )}
         {selectedUser.userConvocationRequirements && (

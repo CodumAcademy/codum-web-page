@@ -11,9 +11,9 @@ const columns = [
     accessor: "phone"
   },
   {
-    Header: "",
-    accessor: "howDidYouFindUsText",
-    Cell: row => <span title="">{row.original.howDidYouFindUsText}</span>
+    Header: "Universidad",
+    accessor: "university",
+    Cell: row => <span title="">{row.original.university}</span>
   },
   {
     Header: "Estado pruebas",
