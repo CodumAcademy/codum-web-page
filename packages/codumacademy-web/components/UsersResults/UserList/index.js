@@ -6,7 +6,7 @@ import columns from "./columns";
 
 const UserList = props => (
   <div>
-    {props.users.lenght > 0 ? (
+    {props.users.length > 0 ? (
       <ReactTable
         data={props.users}
         columns={columns}
