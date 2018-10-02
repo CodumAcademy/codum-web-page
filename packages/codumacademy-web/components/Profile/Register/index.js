@@ -115,7 +115,7 @@ const Register = props => (
       </QuizAppContainer>
     )}
     {props.isPartLoading && <InPartLoading />}
-    {props.currentQuiz.id && (
+    {props.canSchedule && (
       <a
         href="https://docs.google.com/forms/d/1fKDXTQ4i01nrp65055rihv6a1Ks_mPoN01NoCAF_7X4/edit"
         target="_blank"

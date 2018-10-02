@@ -50,7 +50,10 @@ const EmailSuscriptionForm = ({ onSubmit, onChange, emailData }) => (
           </Label>
           <Message
             status={status}
-            dangerouslySetInnerHTML={{ __html: message }}
+            dangerouslySetInnerHTML={{
+              __html:
+                status === "success" ? "!Gracias por suscribirte!" : message
+            }}
           />
 
           <GenericButton
