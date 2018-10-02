@@ -17,7 +17,10 @@ const schema = object().shape({
   cityId: string().required("Requerido!"),
   howDidYouFindUs: string().required("Requerido!"),
   howDidYouFindUsText: string(),
-  terms: string().required("Requerido!")
+  university: string().required("Requerido!"),
+  career: string().required("Requerido!"),
+  semester: string().required("Requerido!"),
+  other: string()
 });
 
 export default schema;

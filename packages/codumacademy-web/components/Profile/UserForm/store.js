@@ -37,7 +37,7 @@ const selectSearch = async (queryOpts, dataKey, client, cb) => {
       complete: true
     });
   } catch (e) {
-    console.error(e);// eslint-disable-line
+    console.error(e); // eslint-disable-line
   }
 };
 
@@ -94,6 +94,14 @@ const handleChange = props => key => e => {
     props.updateField(key, e.target.value);
     func = props.setTypeIdentityDoc;
   }
+  if (key === "university") func = props.setUniversity;
+  if (key === "career") func = props.setCareer;
+  if (key === "semester") {
+    props.updateField(key, e.target.value);
+    func = props.setSemester;
+  }
+  if (key === "other") func = props.setOther;
+
   func(e.target.value);
 };
 
@@ -197,6 +205,11 @@ const state = compose(
     label: props.user.city.name
   })),
   withState("fullName", "setFullName", props => props.user.fullName),
+  withState("university", "setUniversity", props => props.user.university),
+  withState("career", "setCareer", props => props.user.career),
+  withState("semester", "setSemester", props => props.user.semester),
+  withState("other", "setOther", props => props.user.other),
+
   withState("birtday", "setBirtday", props => {
     const birtday = new Date(props.user.birtday);
     const day =

@@ -1,4 +1,4 @@
-import * as bcrypt from 'bcryptjs';
+import * as bcrypt from "bcryptjs";
 import User from ".";
 import { signup, login, verify, getUserId } from "../../utils/auth";
 import defaultResolvers from "../crud-resolvers";
@@ -23,6 +23,10 @@ export const typeDefinitions = `
     countryId: Int!
     stateId: Int!
     cityId: Int!
+    university: String!
+    career: String!
+    semester: String!
+    other: String
 
     typeIdentityDoc: TypeIdentityDoc
     country: Country
@@ -50,6 +54,10 @@ export const typeDefinitions = `
     isAdmin: Boolean
     howDidYouFindUs: String
     howDidYouFindUsText: String
+    university: String!
+    career: String!
+    semester: String!
+    other: String
 
     typeIdentityDocId: Int!
     countryId: Int!
@@ -90,6 +98,10 @@ export const typeDefinitions = `
     countryId: Int!
     stateId: Int!
     cityId: Int!
+    university: String!
+    career: String!
+    semester: String!
+    other: String
   }
 
 `;
@@ -106,7 +118,19 @@ export const mutations = `
   setNewPassword(email: String!): AppMessage
 `;
 
-const allowToIndividualUpdate = ["fullName", "birtday", "phone", "typeIdentityDocId", "identityDoc", "stateId", "cityId"];
+const allowToIndividualUpdate = [
+  "fullName",
+  "birtday",
+  "phone",
+  "typeIdentityDocId",
+  "identityDoc",
+  "stateId",
+  "cityId",
+  "university",
+  "career",
+  "semester",
+  "other"
+];
 
 export const authProtection = {
   crud: {
@@ -118,7 +142,7 @@ export const authProtection = {
   Query: {},
   Mutation: {},
   User: {}
-}
+};
 
 const { crudResolver } = defaultResolvers(User, authProtection);
 
@@ -142,19 +166,19 @@ export const resolvers = {
             message: "Ok",
             success: true,
             error: false
-          }
+          };
         }
         return {
           message: "Record error",
           success: false,
           error: true
-        }
+        };
       }
       return {
         message: "Invalid token",
         success: false,
         error: true
-      }
+      };
     },
     changePassword: async (_, args, ctx, info) => {
       const { id } = await getUserId(ctx);
@@ -163,27 +187,26 @@ export const resolvers = {
         const user = await User.findById(id);
         const valid = await bcrypt.compare(currentPassword, user.password);
         if (valid) {
-            const password = await bcrypt.hash(newPassword, 10);
-            const updatedUser = await user.updateAttributes({ password });
-            if (updatedUser) {
-              return {
-                message: "Ok",
-                success: true,
-                error: false
-              }
-            }
+          const password = await bcrypt.hash(newPassword, 10);
+          const updatedUser = await user.updateAttributes({ password });
+          if (updatedUser) {
             return {
-              message: "Record error",
-              success: false,
-              error: true
-            }
-        }
-        else
+              message: "Ok",
+              success: true,
+              error: false
+            };
+          }
+          return {
+            message: "Record error",
+            success: false,
+            error: true
+          };
+        } else
           return {
             message: "El password actual es incorrecto",
             success: false,
             error: true
-          }
+          };
       }
     },
     setNewPassword: async (_, args, ctx) => {
@@ -193,22 +216,29 @@ export const resolvers = {
         }
       });
       if (user) {
-        const newPassword = Math.random().toString(36).substring(5);
+        const newPassword = Math.random()
+          .toString(36)
+          .substring(5);
         const template = generateTemplate(newPassword);
         const password = await bcrypt.hash(newPassword, 10);
-        const updated = await user.updateAttributes({ password  });
-        await sendEmail(user.email, "codumacademy@imaginamos.co", "Codum Academy - Recuperar contraseña", template);
+        const updated = await user.updateAttributes({ password });
+        await sendEmail(
+          user.email,
+          "codumacademy@imaginamos.co",
+          "Codum Academy - Recuperar contraseña",
+          template
+        );
         return {
           success: true,
           message: "ok",
           error: false
-        }
+        };
       }
       return {
         success: true,
         message: "ok",
         error: false
-      }
+      };
     }
   },
   User: {},
