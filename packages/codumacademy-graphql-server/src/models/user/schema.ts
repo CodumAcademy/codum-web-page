@@ -125,7 +125,11 @@ const allowToIndividualUpdate = [
   "typeIdentityDocId",
   "identityDoc",
   "stateId",
-  "cityId"
+  "cityId",
+  "university",
+  "career",
+  "semester",
+  "other"
 ];
 
 export const authProtection = {
