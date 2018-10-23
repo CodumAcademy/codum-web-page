@@ -92,6 +92,7 @@ const ResultsDetails = ({
                   {selectedUser.semester === "13" &&
                     "Estoy estudiando posgrado"}
                   {selectedUser.semester === "14" && "Otro"}
+                  {selectedUser.semester < 11 && selectedUser.semester}
                 </p>
               </div>
               <div>

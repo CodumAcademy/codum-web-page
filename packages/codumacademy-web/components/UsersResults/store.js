@@ -17,6 +17,19 @@ const parseAnswersJSON = string => {
   return data;
 };
 
+const getAge = date => {
+  const today = new Date();
+  const birtday = new Date(date);
+  let age = today.getFullYear() - birtday.getFullYear();
+  const m = today.getMonth() - birtday.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birtday.getDate())) {
+    age -= 1;
+  }
+
+  return age;
+};
+
 const getUserResult = (currentConvocation, user) => {
   const { convocationRequirements } = currentConvocation;
   const { quizUserSummaries } = user;
@@ -121,7 +134,8 @@ const downloadExcel = props => async () => {
       "Email",
       "Identificación",
       "¿Cómo nos encontró?",
-      "Adicional",
+      "Universidad",
+      "Edad",
       "Estado"
     ],
     data: []
@@ -137,7 +151,8 @@ const downloadExcel = props => async () => {
           email: item.email,
           identityDoc: item.identityDoc,
           howDidYouFindUs: item.howDidYouFindUs,
-          howDidYouFindUsText: item.howDidYouFindUsText,
+          university: item.university,
+          age: getAge(item.birtday),
           message: item.status.message
         }),
       []
