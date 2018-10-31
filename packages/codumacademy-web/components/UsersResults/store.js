@@ -30,6 +30,16 @@ const getAge = date => {
   return age;
 };
 
+const getCorrectAnswers = userQuiz => {
+  if (userQuiz.length > 0) {
+    const corrects = `${userQuiz[0].successAnswers}/${
+      userQuiz[0].totalAnswers
+    }`;
+    return corrects;
+  }
+  return "0/0";
+};
+
 const getUserResult = (currentConvocation, user) => {
   const { convocationRequirements } = currentConvocation;
   const { quizUserSummaries } = user;
@@ -136,7 +146,8 @@ const downloadExcel = props => async () => {
       "¿Cómo nos encontró?",
       "Universidad",
       "Edad",
-      "Estado"
+      "Estado",
+      "total respuestas correctas"
     ],
     data: []
   };
@@ -153,7 +164,8 @@ const downloadExcel = props => async () => {
           howDidYouFindUs: item.howDidYouFindUs,
           university: item.university,
           age: getAge(item.birtday),
-          message: item.status.message
+          message: item.status.message,
+          correctAnswers: getCorrectAnswers(item.quizUserSummaries)
         }),
       []
     );
