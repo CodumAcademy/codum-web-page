@@ -31,7 +31,9 @@ const UsersResults = props => (
       </Helmet>
       <TopNavigation />
       <Container>
-        <Title>Usuarios</Title>
+        <Title>
+          Usuarios {props.isLastConvocation && "de la convocatoria cerrada"}
+        </Title>
         <DownloadIconContainer>
           <DownloadImage
             src="/static/images/icons/file.svg"
@@ -76,7 +78,8 @@ UsersResults.propTypes = {
   currentConvocation: PropTypes.object.isRequired,
   setShowList: PropTypes.func.isRequired,
   downloadExcel: PropTypes.func.isRequired,
-  onCheckRequirement: PropTypes.func.isRequired
+  onCheckRequirement: PropTypes.func.isRequired,
+  isLastConvocation: PropTypes.bool.isRequired
 };
 
 export default withStore(UsersResults);

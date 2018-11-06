@@ -335,7 +335,8 @@ const withRedux = () => {
         ? currentConvocation
         : lastConvocation,
     isAppLoading,
-    isPartLoading
+    isPartLoading,
+    isLastConvocation: currentConvocation.convocationRequirements.length === 0
   });
 
   const mapDispatchToProps = (dispatch, props) =>
