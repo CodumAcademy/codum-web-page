@@ -46,8 +46,7 @@ export const resolvers = {
       return null;
     },
     lastConvocation: async () => {
-      var date = new Date("2018-11-02");
-      console.log(date);
+      var date = new Date("2018-11-06 06:59:59");
       const convocation = await Convocation.findOne({
         where: {
           toDate: date
