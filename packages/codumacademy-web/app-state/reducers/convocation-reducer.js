@@ -1,7 +1,8 @@
 import {
   SET_CONVOCATION,
   CANCEL_SCHEDULE,
-  SET_CONGRATULATIONS
+  SET_CONGRATULATIONS,
+  SET_LAST_CONVOCATION
 } from "../actions/convocation-actions";
 
 const initialState = {
@@ -29,6 +30,11 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         showCongratulations: true
+      };
+    case SET_LAST_CONVOCATION:
+      return {
+        ...state,
+        lastConvocation: action.payload
       };
     default:
       return state;

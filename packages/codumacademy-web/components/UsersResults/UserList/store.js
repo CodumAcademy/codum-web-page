@@ -1,4 +1,4 @@
-import { compose, lifecycle, withHandlers, withProps } from "recompose";// eslint-disable-line
+import { compose, lifecycle, withHandlers, withProps } from "recompose"; // eslint-disable-line
 import { withApollo } from "react-apollo";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";

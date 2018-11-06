@@ -5,7 +5,10 @@ import { bindActionCreators } from "redux";
 // import * as ExportJsonExcel from "js-export-excel";
 
 import { setPartLoading } from "../../app-state/actions/app-actions";
-import { getCurrentConvocation } from "../../app-state/actions/convocation-actions";
+import {
+  getCurrentConvocation,
+  getLastConvocation
+} from "../../app-state/actions/convocation-actions";
 import { getUsersList } from "../../app-state/actions/admin-actions";
 import getUsersListQuery from "../../app-state/query/get-users-complete-list.graphql";
 
@@ -309,6 +312,7 @@ const funcs = withHandlers({
 const withLifecycles = lifecycle({
   componentDidMount() {
     this.props.getCurrentConvocation();
+    this.props.getLastConvocation();
     this.props.getUsersList();
   }
 });
@@ -316,13 +320,23 @@ const withLifecycles = lifecycle({
 const withRedux = () => {
   const mapStateToProps = ({
     app: { isAppLoading, isPartLoading },
-    convocation: { currentConvocation },
+    convocation: { currentConvocation, lastConvocation },
     admin: { users }
   }) => ({
-    users: users.map(user => getUserResult(currentConvocation, user)),
-    currentConvocation,
+    users: users.map(user => {
+      const convocation =
+        currentConvocation.convocationRequirements.length > 0
+          ? currentConvocation
+          : lastConvocation;
+      return getUserResult(convocation, user);
+    }),
+    currentConvocation:
+      currentConvocation.convocationRequirements.length > 0
+        ? currentConvocation
+        : lastConvocation,
     isAppLoading,
-    isPartLoading
+    isPartLoading,
+    isLastConvocation: currentConvocation.convocationRequirements.length === 0
   });
 
   const mapDispatchToProps = (dispatch, props) =>
@@ -330,6 +344,7 @@ const withRedux = () => {
       {
         setPartLoading,
         getCurrentConvocation: () => getCurrentConvocation(props.client),
+        getLastConvocation: () => getLastConvocation(props.client),
         getUsersList: () => getUsersList(props.client)
       },
       dispatch

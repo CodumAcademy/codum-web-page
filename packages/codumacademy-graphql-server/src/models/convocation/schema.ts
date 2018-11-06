@@ -21,7 +21,8 @@ export const typeDefinitions = `
 `;
 
 export const queries = `
-  currentConvocation: Convocation
+  currentConvocation: Convocation,
+  lastConvocation: Convocation
 `;
 
 export const mutations = ``;
@@ -30,14 +31,27 @@ export const resolvers = {
   Query: {
     currentConvocation: async () => {
       var currentDate = new Date();
-      const convocation = await Convocation.findOne({ where: {
-        fromDate: {
-          $lte: currentDate
-        },
-        toDate: {
-          $gte: currentDate
+      const convocation = await Convocation.findOne({
+        where: {
+          fromDate: {
+            $lte: currentDate
+          },
+          toDate: {
+            $gte: currentDate
+          }
         }
-      }});
+      });
+      if (convocation) return convocation;
+
+      return null;
+    },
+    lastConvocation: async () => {
+      var date = new Date("2018-11-06 06:59:59");
+      const convocation = await Convocation.findOne({
+        where: {
+          toDate: date
+        }
+      });
       if (convocation) return convocation;
 
       return null;
@@ -57,4 +71,4 @@ export const authProtection = {
   Query: {},
   Mutation: {},
   Convocation: {}
-}
+};
