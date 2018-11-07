@@ -46,10 +46,10 @@ export const resolvers = {
       return null;
     },
     lastConvocation: async () => {
-      var date = new Date("2018-11-06");
+      // change id for last convocation id
       const convocation = await Convocation.findOne({
         where: {
-          toDate: date
+          id: 1
         }
       });
       if (convocation) return convocation;
